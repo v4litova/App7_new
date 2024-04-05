@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".UI.UI.View.AddBookFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Созданная книга"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Название книги: "
+        android:gravity="left"
+        android:textSize="21dp"/>
+
+    <TextView
+        android:id="@+id/text_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Автор книги: "
+        android:gravity="left"
+        android:textSize="21dp"
+        android:layout_marginTop="16dp"/>
+
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавить в список"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Назад"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+
+</LinearLayout>

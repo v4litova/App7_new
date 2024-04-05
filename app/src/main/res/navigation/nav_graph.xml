@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment1">
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.example.app7_new.UI.UI.View.Fragment1"
+        android:label="fragment_1"
+        tools:layout="@layout/fragment_1" >
+        <action
+            android:id="@+id/action_fragment1_to_fragment2"
+            app:destination="@id/fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.example.app7_new.UI.UI.View.Fragment2"
+        android:label="fragment_2"
+        tools:layout="@layout/fragment_2" >
+        <action
+            android:id="@+id/action_fragment2_to_createBookFragment"
+            app:destination="@id/createBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="com.example.app7_new.UI.UI.View.AddBookFragment"
+        android:label="fragment_add_book"
+        tools:layout="@layout/fragment_add_book" >
+        <action
+            android:id="@+id/action_addBookFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_addBookFragment_to_listFragment2"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_addBookFragment_to_createBookFragment"
+            app:destination="@id/createBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createBookFragment"
+        android:name="com.example.app7_new.UI.UI.View.CreateBookFragment"
+        android:label="fragment_create_book"
+        tools:layout="@layout/fragment_create_book" >
+        <action
+            android:id="@+id/action_createBookFragment_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.app7_new.UI.UI.View.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_createBookFragment"
+            app:destination="@id/createBookFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
+    </fragment>
+</navigation>
