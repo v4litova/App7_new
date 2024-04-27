@@ -3,7 +3,6 @@ package com.example.app7_new.UI.UI.View;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +28,16 @@ public class Fragment2 extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_fragment2_to_createBookFragment);
+                //Navigation.findNavController(view).navigate(R.id.action_fragment2_to_createBookFragment);
+                getActivity().getSupportFragmentManager().beginTransaction().setCustomAnimations(
+                                R.anim.fade_out,
+                                0,
+                                0,
+                                0
+                        )
+                        .replace(R.id.nav_host_fragment, new CreateBookFragment())
+                        .addToBackStack(null)
+                        .commit();
             }
         });
         return view;

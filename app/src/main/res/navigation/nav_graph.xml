@@ -34,9 +34,6 @@
         <action
             android:id="@+id/action_addBookFragment_to_listFragment2"
             app:destination="@id/listFragment" />
-        <action
-            android:id="@+id/action_addBookFragment_to_createBookFragment"
-            app:destination="@id/createBookFragment" />
     </fragment>
     <fragment
         android:id="@+id/createBookFragment"
@@ -46,6 +43,7 @@
         <action
             android:id="@+id/action_createBookFragment_to_addBookFragment"
             app:destination="@id/addBookFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/listFragment"
@@ -55,8 +53,5 @@
         <action
             android:id="@+id/action_listFragment_to_createBookFragment"
             app:destination="@id/createBookFragment" />
-        <action
-            android:id="@+id/action_listFragment_to_addBookFragment"
-            app:destination="@id/addBookFragment" />
     </fragment>
 </navigation>

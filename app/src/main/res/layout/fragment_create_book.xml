@@ -36,12 +36,7 @@
         android:text="Создать"
         android:gravity="center"/>
 
-    <Button
-        android:id="@+id/random_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Создать рандомную книгу"
-        android:gravity="center"/>
+
 
 
 </LinearLayout>

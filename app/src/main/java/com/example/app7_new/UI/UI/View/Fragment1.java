@@ -5,7 +5,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +33,16 @@ public class Fragment1 extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_fragment1_to_fragment2);
+                //Navigation.findNavController(view).navigate(R.id.action_fragment1_to_fragment2);
+                getActivity().getSupportFragmentManager().beginTransaction().setCustomAnimations(
+                                0,
+                                R.anim.slide_in,
+                                0,
+                                0
+                        )
+                        .replace(R.id.nav_host_fragment, new Fragment2())
+                        .addToBackStack(null)
+                        .commit();
             }
         });
     }
